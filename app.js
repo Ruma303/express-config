@@ -39,3 +39,33 @@ const express = require('express');
     const dbUser = process.env.DB_USERNAME;
     const dbPassword = process.env.DB_PASSWORD;
     console.log(dbHost, dbUser, dbPassword);
+
+
+    //% Debug
+    const debug = require('debug');
+    const debugApp = require('debug')('app:generale');
+    const debugDB = require('debug')('app:db');
+    const debugHttp = require('debug')('app:http');
+
+    debugApp('Messaggio di debug generico');
+    debugDB('Debug del database');
+    debugHttp('Debug HTTP in corso');
+
+    /* (function startApp() {
+        debug.enable("app:generale");
+        debugApp('Avviamento dell\'applicazione...');
+    })();
+
+    (function queryDatabase() {
+        debug.enable("app:db");
+        debugDB('Esecuzione di una query sul database...');
+    })();
+
+    (function sendHttpRequest() {
+        debug.enable("app:http");
+        debugHttp('Invio di una richiesta HTTP...');
+    })(); */
+
+
+
+
