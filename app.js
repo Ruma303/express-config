@@ -1,5 +1,5 @@
     const { configDotenv } = require('dotenv');
-const express = require('express');
+    const express = require('express');
     const app = express();
     const PORT = process.env.PORT || 3000;
 
@@ -28,7 +28,7 @@ const express = require('express');
 
 
     //, Gestire configurazioni differenti per ambiente
-    const env = process.env.NODE_ENV || 'development';
+    /* const env = process.env.NODE_ENV || 'development';
     const envPath = `.env${ env === 'development' ? '' : '.' + env }`;
 
     require('dotenv').config({
@@ -38,18 +38,18 @@ const express = require('express');
     const dbHost = process.env.DB_HOST;
     const dbUser = process.env.DB_USERNAME;
     const dbPassword = process.env.DB_PASSWORD;
-    console.log(dbHost, dbUser, dbPassword);
+    console.log(dbHost, dbUser, dbPassword); */
 
 
     //% Debug
-    const debug = require('debug');
+    /* const debug = require('debug');
     const debugApp = require('debug')('app:generale');
     const debugDB = require('debug')('app:db');
     const debugHttp = require('debug')('app:http');
 
     debugApp('Messaggio di debug generico');
     debugDB('Debug del database');
-    debugHttp('Debug HTTP in corso');
+    debugHttp('Debug HTTP in corso'); */
 
     /* (function startApp() {
         debug.enable("app:generale");
